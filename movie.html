@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <link rel="stylesheet" href="/websites/movie-ticket/movie.css">
+</head>
+<body>
+        <div class="container">
+        <div class="movie" id="movie_name">
+        <span>Pick a Movie:   </span>  
+        <!-- <input type="text" placeholder="Movie name"> -->
+        <select id="mov-op">
+            <option value="m1">--Select the Movie--</option>
+            <option value="m2" id="sm3d">Spider-Man: No Way Home(3D) (Rs.450)</option>
+            <option value="m3" id="sm2d">Spider-Man: No Way Home(2D) (Rs.350)</option>
+            <option value="m4" id="s2d">Sooryavanshi(2D) (Rs.350)</option>
+            <option value="m5" id="p3d">Pushpa(3D) (Rs.450)</option>
+            <option value="m6" id="82d">83(2D) (Rs.350)</option>
+        </select>
+        </div>
+        <div class="option">
+            <span class="icon" id="na">span</span>
+            <span class="op">N/A</span>
+            <span class="icon" id="sel">span</span>
+            <span class="op">Selected</span>
+            <span class="icon" id="ocu">span</span>
+            <span class="op">Occupied</span>
+        </div>
+        <div class="screen"></div>
+        <div class="seats">
+            <div class="line">
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book occupied"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+            </div>
+            <div class="line">
+                <span class="book occupied"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book occupied"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+            </div>
+            <div class="line">
+                <span class="book" onclick="toggle(this) " ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book occupied"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+            </div>
+            <div class="line">
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book occupied"></span>
+                <span class="book occupied"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book occupied"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>               
+            </div>
+            <div class="line">
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book occupied"></span>
+                <span class="book occupied"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+            </div>
+            <div class="line">
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book occupied"></span>
+                <span class="book occupied"></span>
+            </div>
+            <div class="line">
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book occupied" ></span>
+                <span class="book occupied"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+            </div>
+            <div class="line">
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book occupied"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book occupied"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+                <span class="book" onclick="toggle(this)" ondblclick="deSelect(this)"></span>
+            </div>
+        </div>
+        <div class="calc">
+            <p>You have selected <span id="no">0</span> seats of Rs. <span id="money">0</span></p>
+        </div>
+    </div>
+    <script>
+        let no_seat= document.getElementById('no')
+        let amount=document.getElementById('money')
+        let mov_op=document.getElementById('mov-op')
+        let t=0
+        function toggle(currTarget){
+            if(currTarget.style.background="grey"){
+                currTarget.style.background="aqua"
+                t++
+                no_seat.innerHTML=t
+                    if(mov_op.options[1].selected==true  || mov_op.options[4].selected==true ){ 
+                    amount.innerHTML=450*t
+                    }
+                    else{
+                        amount.innerHTML=350*t
+                    }
+            }
+            
+        }
+        
+        function deSelect(currTarget){
+            if(currTarget.style.background="aqua"){
+                currTarget.style.background="grey"
+                t=t-3
+                no_seat.innerHTML=t
+                if(mov_op.options[1].selected==true  || mov_op.options[4].selected==true ){ 
+                    amount.innerHTML=450*t
+                    }
+                    else{
+                        amount.innerHTML=350*t
+                    }
+        }
+    }           
+    </script>
+</body>
+</html>

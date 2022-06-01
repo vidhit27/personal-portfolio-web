@@ -1,0 +1,139 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-image: url('/websites/tesla/ms-main-hero-desktop.jfif');
+    background-size: 1364px 860px;
+}
+header {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+header li{
+    font-size: 14px;
+    
+}
+
+.header1 li img{
+    height: 11vh;
+    width: 20vh;
+    margin-top: -4px;
+    cursor: pointer;
+}
+
+
+.header2{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 261px;
+}
+.header2 li:hover{
+    background-color: rgba(247, 245, 245, 0.438);
+    cursor: pointer;
+    border-radius: 24px;
+    width: 85px;
+    height: 27px;
+    margin-top: 14px;
+    padding-top: 9px;
+    padding-left: 22px;
+    margin-left: 26px;
+}
+
+.header2 li{
+    padding-top: 24px;
+    padding-left: 30px;
+    font-weight: bold;
+    color: rgb(49, 46, 46);
+}
+
+
+.header3{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 192px;
+}
+.header3 li{
+    padding-top: 24px;
+    padding-left: 26px;
+    font-weight: bold;
+    color: rgb(49, 46, 46);
+}
+.header3 li:hover{
+    background-color: rgba(247, 245, 245, 0.438);
+    cursor: pointer;
+    border-radius: 24px;
+    width: 85px;
+    height: 27px;
+    margin-top: 14px;
+    padding-top: 9px;
+    padding-left: 22px;
+    margin-left: 26px; } 
+
+.content1{
+    font-size: 40px;
+    font-family: 'Ubuntu', sans-serif;
+    /* font-weight: bold; */
+    padding-left: 612px;
+    padding-top: 45px;
+}
+
+
+.content2{
+    font-size: 19px;
+    font-family: 'Ubuntu', sans-serif;
+    padding-left: 668px;
+    padding-top: 1px;
+}
+
+.list1 li{
+    font-family: 'Ubuntu', sans-serif;   
+    color: white;
+    font-size: 28px;
+    font-weight: 500;
+    list-style-type: none;
+    padding-left: 104px;
+}
+.list1{
+    display: flex;
+    flex-direction: row;
+    padding-left: 189px ;
+    padding-top: 378px;
+}
+
+.list2 li{
+    font-family: 'Ubuntu', sans-serif;   
+    color: white;
+    font-size: 17px;
+    list-style-type: none;
+    padding-left: 102px;
+}
+.list2{
+    display: flex;
+    flex-direction: row;
+    padding-top: 9px;
+    padding-left: 176px;
+}
+
+.content3{
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;   
+    color: white;
+    border: 3px solid white;
+    border-radius: 40px;
+    margin-top: -53px;
+    padding-left: 47px;
+    width: 146px;
+    height: 27px;
+    padding-top: 12px;
+    font-size: 14px;
+    margin-left: 1004px;
+}
+.content3:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/websites/calculator/calc.css">
+</head>
+<body>
+    <!-- <div class="main"> -->
+    <div class="title">CALCULATOR</div>
+    <div class="container">
+    <!-- </div> -->
+        <div class="inp">
+            <input type="text" id="val"> 
+        </div>
+        <div class="row1">
+            <button id="clear">AC</button>
+            <button id="brac1" class="op">(</button>
+            <button id="brac2" class="op">)</button>
+            <button id="per" class="op">%</button>
+        </div>
+        <div class="row2">
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+            <button id="mul" class="op">X</button>
+        </div>
+        <div class="row3">
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+            <button id="sub" class="op">-</button>
+        </div>
+        <div class="row4">
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="1">1</button>
+            <button id="add" class="op">+</button>
+        </div>
+        <div class="row5">
+            <button id="pt">.</button>
+            <button id="0">0</button>
+            <button id="div" class="op">/</button>
+            <button id="ans" >=</button>
+        </div>
+    </div>
+    <script>
+        btn=document.querySelectorAll('button')
+        let val=document.getElementById('val')
+        let clear=""
+        for(node of btn){
+            node.addEventListener('click',(e)=>{
+            btntext=e.target.innerText;
+            if(btntext=="X")
+            {
+                btntext='*'
+                clear+=btntext
+                val.value+=btntext
+            }
+            else if(btntext=="/")
+            {
+                btntext='/'
+                clear+=btntext
+                val.value+=btntext                
+            }
+            else if(btntext=="+")
+            {
+                btntext='+'
+                clear+=btntext
+                val.value+=btntext
+            }
+            else if(btntext=="-")
+            {
+                btntext='-'
+                clear+=btntext
+                val.value+=btntext            
+            }
+            else if(btntext=="=")
+            {
+                val.value=eval(clear)
+            }
+            else if(btntext=="AC")
+            {
+                clear=""
+                val.value=clear
+            }
+            else if(btntext=="%")
+            {
+                btntext='%'
+                clear+=btntext
+                val.value+=btntext                             
+            }
+            else{
+                clear+=btntext
+                val.value+=btntext
+            }
+            })
+        }
+    </script>
+</body>
+</html>

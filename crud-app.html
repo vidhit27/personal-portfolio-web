@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud app</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    nav{
+        background-color: crimson;
+        padding: 15px 10px;
+    }
+    nav a{
+        text-decoration: none;
+        color: white;
+        padding: 15px;
+    }
+    .container{
+       margin-left:auto;
+       margin-right: auto;
+       margin-top: 20px;
+       width: 50%;
+   }
+    #input-type input{
+        padding: 10px;
+        height: 10px;
+        border-radius: 5px;
+        width: 550px;
+        border-radius: 5px;
+    }
+    #input-type button{
+        padding: 8px;
+        color: green;
+        border: 1px solid grey;  
+        border-radius:4px ;
+    }
+    #input-type button:hover{
+        background-color: limegreen;
+        color: white;
+        border: 1px solid grey;  
+    }
+    .list{
+        border: 2px solid black;
+        padding: 10px;
+        margin-top: 10px;
+
+    }
+    .list li{
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        border: 2px solid black;
+        padding: 10px;
+        
+    }
+    .list h3{
+        flex-grow: 1;
+    }
+    .list #btn2{
+        background-color: red;
+        color: white;
+        border-radius: 4px;
+        padding: 5px;
+        border: 1px solid grey;  
+    }
+    .list #btn3{
+        background-color: gold;
+        color: black;
+        border-radius: 4px;
+        /* margin-left: 29em; */
+        padding: 5px;   
+        border: 1px solid grey;     
+    }
+    .list #btn2:hover{
+        background-color: orangered;
+    }
+    .list #btn3:hover{
+        background-color: orange;
+    }
+</style>
+<body>
+<header>
+    <nav class="nav-bar">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact Us</a>
+        <a href="#">About</a>
+    </nav>
+    </header>
+<main>
+   <div class="container"> 
+    <div id="input-type" class="inp">
+        <input type="text" placeholder="Course Name">
+        <button id="btn1">Add</button>
+    </div>
+    <ul id="parentList" class="list">
+        <li class="item">
+            <h3 class="heading">Chapter 1</h3> 
+            <button id="btn3" onclick="editChapter(this)">Edit</button>
+            <button id="btn2" onclick="removeChapter(this)">Remove</button>
+        </li>
+    </ul>
+
+</div>
+</main>
+<script>
+    //Add button
+    let btn1=document.getElementById('btn1')
+    btn1.addEventListener('click',addChapter)
+    function addChapter(e){
+        let parentList=document.getElementById('parentList')
+        if(parentList.children[0].className=="emptyMsg")
+        {
+            parentList.children[0].remove();
+        }
+    
+       let currentBtn=e.currentTarget;
+       let currentInput=currentBtn.previousElementSibling;
+       let currentChapter=currentInput.value
+    //    console.log(currentInput.value); 
+       
+       let newLi=document.createElement('li')
+       newLi.classList.add('item')
+    //    newLi.textContent=currentInput.value 
+       newLi.innerHTML=`<h3>${currentChapter}</h3> 
+       <button id="btn3" onclick="editChapter(this)">Edit</button>
+       <button id="btn2" onclick="removeChapter(this)">Remove</button>`
+       
+    //    let parentList=document.getElementById('parentList')
+       parentList.appendChild(newLi) 
+      }
+
+    //Remove button
+    function removeChapter(currElement){
+        currElement.parentElement.remove();
+        //now to display a msg that nothing is there 
+        let parentList=document.getElementById('parentList')
+        if(parentList.children.length<=0){
+            let newEmptyMsg=document.createElement("h3")
+            newEmptyMsg.classList.add("emptyMsg")
+            newEmptyMsg.textContent="Nothing is here.Please add new"
+            parentList.appendChild(newEmptyMsg)
+        }
+    }
+
+    //Edit button
+    function editChapter(currElement){
+        if(currElement.textContent=="Done")
+        {
+            currElement.textContent="Edit"
+            let currChapterName= currElement.previousElementSibling.value
+            let currHeading=document.createElement('h3')
+            currHeading.className="heading"
+            currHeading.textContent=currChapterName
+            currElement.parentElement.replaceChild(currHeading,currElement.previousElementSibling)
+
+        }
+        else{
+        currElement.textContent="Done"
+        let currChapterName= currElement.previousElementSibling.textContent
+        let newInput= document.createElement('input')
+        // newInput.innerHTML=`<input type="text">`;
+        newInput.type="text"
+        newInput.placeholder="Chapter Name"
+        newInput.className="inp"
+        newInput.value=currChapterName
+        currElement.parentElement.replaceChild(newInput,currElement.previousElementSibling)
+        }
+    }
+</script>
+</body>
+</html>
