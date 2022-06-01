@@ -1,0 +1,226 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    /* font-family: 'Cairo', sans-serif; */
+    /* font-family: 'Abel', sans-serif; */
+    /* font-family: 'Dosis', sans-serif; */
+    font-family: 'Poiret One', cursive;
+
+
+}
+.content1{
+    /* background-image: url('/websites/personal-portfolio/img/Background\ Jquery\ CSS.png'); */
+    /* background-size: cover; */
+    background-color:rgb(14, 13, 13);
+
+    /* background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%); */
+    width: 100vw;
+    height: 50vw;
+}
+.main .navbar{
+    position: sticky;
+    top: 0;
+}
+
+.main{
+    width: 18vw;
+     height: 100vw;
+     background-image: linear-gradient(to right, #361e1e 0%, black 100%); 
+    }
+.main .navbar li .prof{
+    width:10vw;
+    border: 4px solid white;
+    border-radius: 50%;
+}
+.main .navbar li .social a img{
+    width: 1.8vw;
+}
+.main .navbar li .social a img:hover{
+    transform: scale(1.2);
+}
+.main .navbar li a img{
+    width:1.6vw;
+    padding-right: 11px;
+}
+
+.main .navbar li{
+    list-style: none;
+    padding: 1vw;
+    font-size: 1.32vw;
+    /* text-align: center; */
+}
+.main .navbar li a img{
+    width:1.6vw;
+    padding-right: 11px;
+}
+
+.main .navbar li a{
+    text-decoration: none;
+    color: white;
+}
+.main .navbar li a:hover{
+    color: #DC143C;
+}
+.box{
+    display: flex;
+}
+.cont h1,.cont h1 span{
+      text-align: center;
+      color: white;
+      font-family: 'Inconsolata', monospace;
+      padding-top: 2vw;
+      }
+      .container h2{
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: .15em solid #1E90FF;
+        width: 15vw;
+        animation: type 3s steps(25), blink 0.5s step-end infinite alternate ;    
+      }
+@keyframes type {
+    from{
+        width: 0%;
+    }
+    
+}
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}
+
+.cont h1 span{
+    color: #DC143C;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    color: wheat;
+    padding-top: 5vw;
+    padding-left: 6vw;
+}
+.container h2,.container h2 span{
+    padding-bottom: 1.5vw;
+}
+.container h2 span{
+    color: crimson;
+}
+.container .myinfo ul li{
+    list-style: none;
+    font-family: 'Inconsolata', monospace;
+    padding-bottom: 1.5vw;
+}
+.container .myinfo ul li img{
+    width:2vw;
+    padding-right: 1vw;
+}
+.myinfo{
+    padding-left:5vw;
+    padding-right: 5vw;
+}
+.yourinfo input{
+     margin-bottom:2vw ;
+}
+input[type="text"],input[type="email"],input[type="number"],input[type="date"]{
+    height: 2vw;
+    background-color: transparent;
+    color: wheat;
+    border: 1px solid white;
+    border-radius: 0.5vw;
+    padding: 0.7vw;
+}
+.yourinfo button{
+    padding: 0.6vw 2vw;
+    border-radius: 1.5vw;
+    background-color: dodgerblue;
+    color: white;
+    border: 2px solid white;
+}
+.yourinfo button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: crimson;
+    border-color: #DC143C;
+}
+.hamburger{
+    cursor: pointer;
+    display: flex;
+    /* position: absolute;
+    left:10vw;
+    right:10vw */
+}
+.ham,.cross{
+    background-color: white;
+    width: 1.7vw;
+    height: 1.5vw;
+    position: absolute;
+    border-radius: 0.2vw;
+    margin-top:0.5vw ;
+    margin-left: 0.5vw;
+}
+.navbargo{
+    transform: translate(-440px,0px);
+    position: absolute;
+}
+@media (max-width: 1032px){
+    .main{
+       /* transform:translate(-400px,0px);  */
+       position: absolute; 
+       width: 40vw;
+       height: 700vw;
+  }  
+ .main .navbar li .social a img{
+     padding-top: 3vw;
+     padding-bottom: 2vw;
+ }
+ .box{
+    background-color:rgb(14, 13, 13);
+    height: 700vw;
+ }
+ .container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+ }
+ .yourinfo{
+     padding-top: 8vw;
+ }
+.container h2{
+    width: 53vw;
+}
+}
+/* .dark{
+    background-color: white;
+    width: 3.4vw;
+    border-radius: 0.5vw;
+    margin-left: 75vw;
+    border-radius: 1vw;
+    padding-left: 0.7vw;
+    margin-top: 1vw;
+    border: 0.24vw solid crimson;
+    cursor: pointer;
+}
+.moon {
+      
+      margin-top: 0.1vw;
+      margin-left:0.4vw;
+}
+.dark1{
+    background-color: lightslategray;
+}
+/* .dark:hover{
+    background-color: ;
+} 
+.white{
+    background-color: rgb(190, 184, 184);
+}
+.black{
+    color: black;
+}
+.white1{
+    background-color: rgb(190, 184, 184);
+
+} */
