@@ -103,7 +103,7 @@
     justify-content: center;
     /* height: 100vw; */
 }
-.calc img,.bu img,.tes img,.mov img,.crud img{
+.calc img,.bu img,.tes img,.mov img,.crud img,.ex img{
     width: 30vw;
     border:0.3vw solid wheat ;
     margin: 0.3vw;
@@ -111,7 +111,7 @@
     margin-left: 8vw;
     margin-top: 4vw;
 }
-.calc:hover,.crud:hover,.tes:hover,.mov:hover,.bu:hover{
+.calc:hover,.crud:hover,.tes:hover,.mov:hover,.bu:hover,.ex img{
     transform: scale(1.1);
     cursor: pointer;
 }

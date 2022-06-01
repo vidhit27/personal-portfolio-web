@@ -1,0 +1,105 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: black;
+}
+.container{
+    text-align: center;
+}
+.logo img{
+    width: 15em;
+}
+.logo #heading{
+    color: #DD4124;
+    font-size: 2em;
+    font-weight: 900;
+    margin: 10px;
+}
+.logo .full-form{
+    display: flex;
+    width: 20em;
+    margin-left: 31em;
+    flex-direction: column;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+.logo .full-form p{
+    animation: animate 1.5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        opacity: 20%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    100%{
+        opacity: 100%;
+        color: chocolate;
+    }
+}
+.logo #info{
+    color: white;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.row1,.row2{
+    margin-top:2em ;
+    margin-bottom: 2em;
+}
+.content #sel1, #sel2{
+padding: 6px;
+margin-right: 11em;
+background-color: black;
+color:darkorange;
+border: 1px solid aqua;
+border-radius:5px ;
+}
+.content #amount{
+padding: 6px;
+width: 43px;
+height: 18px;
+background-color: black;
+color:darkorange;
+border: 1px solid aqua;
+border-radius:5px ;
+}
+.content #conv{
+    padding: 6px;
+width: 43px;
+height: 18px;
+background-color: black;
+color:darkorange;
+border: 1px solid aqua;
+border-radius:5px ;
+
+}
+/*.content .mid #btn{
+       margin-right: 16em;
+       width: 5em;
+       height: 30px;
+       border: 1px solid white;
+       background-color: darkred;
+       color:white;
+       border-radius: 5px;
+}*/
+.submit{
+    margin-top: 2em;
+}
+.submit #btn2{
+    width: 5em;
+    height: 30px;
+    border: 1px solid white;
+    background-color: darkred;
+    color:white;
+    border-radius: 5px;
+}
+
+.submit #btn2:hover{
+    cursor: pointer;
+    background-color:crimson;
+}

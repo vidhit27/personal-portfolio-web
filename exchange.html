@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange-Rate</title>
+    <link rel="stylesheet" href="exchange.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="eg12o46g4hv41r7e01cu3184ms.png">
+            <p id="heading">Exchange Rate Calculator</p>
+            <p id="info">Choose the currency and the amounts to get the exchange rate</p>
+            <div class="full-form">
+                <p id="usd">USD - United States Dollar</p>
+                <p id="eur">EUR - Euro</p>
+                <p id="inr" >INR - Indian Rupees</p>    
+                <p id="cad">CAD - Canadian Dollar</p>
+                <p id="aud">AUD - Australian Dollar</p>
+                <p id="jpy">JPY - Japanese Yen</p>
+               </div>
+        </div>
+        <div class="content">
+            <div class="row1">
+            <select id="sel1">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="INR">INR</option>
+                <option value="CAD">CAD</option>
+                <option value="AUD">AUD</option>
+                <option value="JPY">JPY</option>
+            </select>
+            <input  id="amount" type="number" min="0" value="0">
+        </div>
+        <!-- <div class="mid"> -->
+            <!-- <button id="btn">Swap</button> -->
+        <!-- </div> -->
+        <div class="row2">
+            <select id="sel2">
+                <option value="USD">USD</option>
+                <option value="EUR" selected>EUR</option>
+                <option value="INR">INR</option>
+                <option value="CAD">CAD</option>
+                <option value="AUD">AUD</option>
+                <option value="JPY">JPY</option>
+            </select>
+            <span id="conv">0.000</span>
+        </div>
+        <div class="submit">
+            <button id="btn2" onclick="convert()">Convert</button>
+        </div>
+        </div>
+    </div>
+    
+    <script>
+        let sel1=document.getElementById('sel1')
+        let sel2=document.getElementById('sel2')
+        function convert(){
+        //USD TO USD
+        if(sel1.options[0].selected==true && sel2.options[0].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x
+            document.getElementById('conv').innerHTML=t
+        }
+        //USD TO EUR
+        if(sel1.options[0].selected==true && sel2.options[1].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.89
+            document.getElementById('conv').innerHTML=t
+        }
+        //USD TO INR
+        if(sel1.options[0].selected==true && sel2.options[2].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*74.83
+            document.getElementById('conv').innerHTML=t
+        }
+        //USD TO CAD
+        if(sel1.options[0].selected==true && sel2.options[3].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*1.27
+            document.getElementById('conv').innerHTML=t
+        }
+        //USD TO AUD
+        if(sel1.options[0].selected==true && sel2.options[4].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*1.40
+            document.getElementById('conv').innerHTML=t
+        }
+        //USD TO JPY
+        if(sel1.options[0].selected==true && sel2.options[5].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*114.56
+            document.getElementById('conv').innerHTML=t
+        }
+        
+        //EUR TO EUR
+        if(sel1.options[1].selected==true && sel2.options[1].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x
+            document.getElementById('conv').innerHTML=t
+        }
+        //EUR TO USD
+        if(sel1.options[1].selected==true && sel2.options[0].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*1.13
+            document.getElementById('conv').innerHTML=t
+        }
+        //EUR TO INR
+        if(sel1.options[1].selected==true && sel2.options[2].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*84.51
+            document.getElementById('conv').innerHTML=t
+        }
+        //EUR TO CAD
+        if(sel1.options[1].selected==true && sel2.options[3].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*1.43
+            document.getElementById('conv').innerHTML=t
+        }
+        //EUR TO AUD
+        if(sel1.options[1].selected==true && sel2.options[4].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*1.5822
+            document.getElementById('conv').innerHTML=t
+        }
+        //EUR TO JPY
+        if(sel1.options[1].selected==true && sel2.options[5].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*129.34
+            document.getElementById('conv').innerHTML=t
+        }
+
+         //INR TO USD
+         if(sel1.options[2].selected==true && sel2.options[0].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.013
+            document.getElementById('conv').innerHTML=t
+        }
+        //INR TO EUR
+        if(sel1.options[2].selected==true && sel2.options[1].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.012
+            document.getElementById('conv').innerHTML=t
+        }
+        //INR TO INR
+        if(sel1.options[2].selected==true && sel2.options[2].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x
+            document.getElementById('conv').innerHTML=t
+        }
+        //INR TO CAD
+        if(sel1.options[2].selected==true && sel2.options[3].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.017
+            document.getElementById('conv').innerHTML=t
+        }
+        //INR TO AUD
+        if(sel1.options[2].selected==true && sel2.options[4].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.019
+            document.getElementById('conv').innerHTML=t
+        }
+        //INR TO JPY
+        if(sel1.options[2].selected==true && sel2.options[5].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*1.53
+            document.getElementById('conv').innerHTML=t
+        }
+        
+         //CAD TO USD
+         if(sel1.options[3].selected==true && sel2.options[0].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.79
+            document.getElementById('conv').innerHTML=t
+        }
+        //CAD TO EUR
+        if(sel1.options[3].selected==true && sel2.options[1].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.70
+            document.getElementById('conv').innerHTML=t
+        }
+        //CAD TO INR
+        if(sel1.options[3].selected==true && sel2.options[2].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*58.93
+            document.getElementById('conv').innerHTML=t
+        }
+        //CAD TO CAD
+        if(sel1.options[3].selected==true && sel2.options[3].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x
+            document.getElementById('conv').innerHTML=t
+        }
+        //CAD TO AUD
+        if(sel1.options[3].selected==true && sel2.options[4].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*1.11
+            document.getElementById('conv').innerHTML=t
+        }
+        //CAD TO JPY
+        if(sel1.options[3].selected==true && sel2.options[5].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*90.33
+            document.getElementById('conv').innerHTML=t
+        }
+
+         //AUD TO USD
+         if(sel1.options[4].selected==true && sel2.options[0].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.71
+            document.getElementById('conv').innerHTML=t
+        }
+        //AUD TO EUR
+        if(sel1.options[4].selected==true && sel2.options[1].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.63
+            document.getElementById('conv').innerHTML=t
+        }
+        //AUD TO INR
+        if(sel1.options[4].selected==true && sel2.options[2].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*53.32
+            document.getElementById('conv').innerHTML=t
+        }
+        //AUD TO CAD
+        if(sel1.options[4].selected==true && sel2.options[3].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.9
+            document.getElementById('conv').innerHTML=t
+        }
+        //AUD TO AUD
+        if(sel1.options[4].selected==true && sel2.options[4].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x
+            document.getElementById('conv').innerHTML=t
+        }
+        //AUD TO JPY
+        if(sel1.options[4].selected==true && sel2.options[5].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*81.72
+            document.getElementById('conv').innerHTML=t
+        }
+
+         //JPY TO USD
+         if(sel1.options[5].selected==true && sel2.options[0].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.0087
+            document.getElementById('conv').innerHTML=t
+        }
+        //JPY TO EURO
+        if(sel1.options[5].selected==true && sel2.options[1].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.0077
+            document.getElementById('conv').innerHTML=t
+        }
+        //JPY TO INR
+        if(sel1.options[5].selected==true && sel2.options[2].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.65
+            document.getElementById('conv').innerHTML=t
+        }
+        //JPY TO CAD
+        if(sel1.options[5].selected==true && sel2.options[3].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.011
+            document.getElementById('conv').innerHTML=t
+        }
+        //JPY TO AUD
+        if(sel1.options[5].selected==true && sel2.options[4].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x*0.012
+            document.getElementById('conv').innerHTML=t
+        }
+        //JPY TO JPY
+        if(sel1.options[5].selected==true && sel2.options[5].selected==true)
+        {
+            var x = document.getElementById("amount").value;
+            let t=x
+            document.getElementById('conv').innerHTML=t
+        }
+
+         
+
+    }
+    </script>
+</body>
+</html>
