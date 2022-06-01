@@ -58,7 +58,7 @@ body{
 .content{
     width: 100%;
 /* background-color:  #10100a	; */
-background-image: url('/websites/personal-portfolio/img/p1.jpeg');
+background-image: url('p1.jpeg');
 background-size: contain;
 background-repeat: repeat-x;
 background-position-x: 31vw;
